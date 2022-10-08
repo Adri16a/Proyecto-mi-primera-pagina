@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ENCICLOPEDIA</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  	*{
+  		margin: 0 auto;
+  		padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: "Open sans", sans-serif;
+  	}
+  	body{
+  		background: url(fondo.jpg);
+  		background-size: 100vw 100vh;
+  		background-repeat: no-repeat;
+  	}
+  	header{
+  		width: 100%;
+		  height: 200px;
+		  position: fixed;
+		  background: url(banner.png);
+  		background-repeat: no-repeat;
+ 
+  	}
+  	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		z-index: -1;
+		
+	  }
+	  .Pagina-web{
+	  		float: right;
+	  		padding: 10px 1000px 10x;
+
+		
+	  }
+  	.contenedor #btn-menu, .logo{
+		float: left;
+		line-height:70px;
+	  }
+	  .contenedor-menu-superior #btn-menu {
+		float: left;
+		line-height:60px;
+	  }
+	  .contenedor-menu-superior #btn-menu, label{
+		color: #C90018;
+		font-size: 50px;
+		cursor: pointer;
+
+	  }
+  	.contenedor{
+  		width: 90%;
+		  max-width: 1200px;
+		  margin: auto;
+
+  	}
+  	
+  	#btn-menu{
+		display: none;
+	  }
+
+	  .container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 10;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	  }
+  	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	  }
+	  .cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(-215%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 30px;
+		color: #c1c1c1;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c1c1c1;
+		background: #45484a;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 0px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+  	.logo{
+  		float: left;
+  		padding: 7px 20px 0;
+  	}
+  	.logo img{
+  		height: 120px;
+  	}
+  	.logo img:hover{
+  		transform: scale(1.2);
+  	}
+
+  	.logo-redes{
+      float: right;
+      display:  flex;
+      align-items: center;
+      min-height: 120px;
+      z-index: 1000px;
+      
+  	}
+
+  	.logo-redes img:hover{
+  		transform: scale(1.2);
+  	}
+  	.logo-redes img{
+  		height: 60px;
+  	}
+  	/*barra menu*/
+  	.contenedor-menu-superior{
+      width: 1500px;
+      background-color: #C1334E;       
+      float:left;
+      height:40px;    
+  	}
+  	.contenedor-menu-superior ul{
+  	list-style: none;
+  	padding: 0 10px;	
+  	}
+  	.contenedor-menu-superior ul li{
+  		display: inline-block;
+  		position: relative;
+  		transition: 3s linear;
+  		z-index: 1000px;
+  	}
+  	.contenedor-menu-superior ul li:hover{
+  		transform: scale(1.1);
+  	}
+  	.contenedor-menu-superior ul li a{
+  		color: black;
+  		text-align: center;
+  		text-transform: uppercase;
+  		font-weight: bold;
+  		font-weight: 14 px;
+  		padding: 12px 20px;
+  		transition: 3s linear;
+  	}
+  	.contenedor-menu-superior ul li a: hover .menu2{
+  		color: black;
+  		background: #333333;
+  		
+  	}
+  	
+  	
+  	.contenedor-menu-superior .menu2  {
+  		display: block;
+  		overflow: hidden;
+  		border-bottom: none;
+  	}
+
+  	.menu2{
+  		max-width: 600px;
+  		margin: auto;
+      height: :100%;
+      align-items: center;
+      padding: 14px;
+      text-transform: uppercase;
+      font-size: 16px;
+      
+  	}
+  	.menu2 li a:hover{
+  		transition: scale(1.3);
+  		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  	}
+
+
+  	.contenido {
+      width: 80%; 
+      background-color:antiquewhite;
+      align-items: center;
+      padding: 310px 20px ;
+      }
+      .text1{
+      	color: black;
+		   font-size: 15px;
+		   float: left;
+  		padding: 0px 7px -10px -100px;
+  		align-items: center;
+      }
+      .texto{
+      	color: black;
+      }
+      .contenido .texto{
+      	height: 120px;
+      }
+      .contenido .imagen{
+      	height: 120px;
+      }
+  </style>
+</head>
+<body>
+	<header>
+		<div class="contenedor">
+			<a href=""class="logo"><img src="logo.png"alt=""></a>
+			<div class="btn-menu">
+				<h1 class="Pagina-web"> PAGINA WEB</h1>
+
+			<label for="btn-menu">☰</label>
+		  </div>
+			 <nav class="logo-redes">
+				
+					<img src="instagram.png" alt=""><img src="facebook.png" alt=""><img src="youtube.png" alt="">
+				
+			</nav>
+		</div>
+
+		<div class="contenedor-menu-superior">
+			<div class="menu2">
+				<nav>
+					<ul>
+						<li><a href="index.html">INICIO</a></li>
+            <li><a href="https://www.domestika.org/es/courses/">CURSOS DE PAGINA WEB</a></li>
+            <li><a href="https://www.tiendanube.com/blog/mx/herramientas-para-crear-paginas-web/">PLANTILLAS</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+		</div>
+	</header>
+	<div>
+	</div>
+	<div class="capa"></div>
+<!--	--------------->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+			<a href="pagina4.html">¿QUE ES PAGINA WEB</a>
+      <a href="pagina1.html">¿QUE ES SITIO WEB</a>
+      <a href="pagina2.html">TIPOS DE SITIO WEB</a>
+      <a href="pagina3.html">¿QUE ES UNA ETIQUETA</a>
+      <a href="pagina6.html">TIPOS DE ETIQUETAS</a>
+      <a href="pagina5.html">PARTES-PAGINA WEB</a>
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+</body>
+<div class="contenido"> 
+<div class="text1">
+	<h1>
+		¿Qué es un sitio web?
+	</h1>
+	<div><p href="texto">Es una colección de páginas web que se agrupan y normalmente se conectan de varias maneras. </p> </div>
+   <h3>Servidor web</h3>
+<div><p href="texto">Es un computador conectado constantemente a internet y que aloja uno o varios sitios web. Las bibliotecas son como servidores porque alojan diferentes secciones (Ciencias, Literatura, Historia). Claro, aunque con horario limitado.</p></div>
+
+<h3>Motores de búsquedab</h3>
+<div><p href="texto">Son plataformas –usualmente en forma de sitio web como Google, Bing, Yahoo o DuckDuckGo– que ayudan a encontrar páginas web. En el ejemplo el computador con el catálogo virtual es como el “Google de la biblioteca”.</p></div><a class="imagen" href="sitio1.jpg" download><img class="imagen" src="sitio1.jpg" alt="imagen de ejemplo"/></a>
+ 
+ 
+</div>            
+  </div>
+</html>
